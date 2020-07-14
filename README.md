@@ -1,4 +1,4 @@
-# Modelling Crystallisation of Norislk Parent Magma Candidates
+# Modelling Crystallisation of Norilsk Parent Magma Candidates
 
 This short presentation for the CSIRO Mineral Resources 'Covideo' Series covers some of the melt modelling work conducted *alongside* the research published by [Schoneveld et al. (2020)].
 
