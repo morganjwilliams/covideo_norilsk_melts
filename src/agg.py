@@ -12,3 +12,10 @@ system, phases = aggregate_tables(outputfolder)
 
 system.to_hdf(outputfolder / "system.h5", key="df")
 phases.to_hdf(outputfolder / "phases.h5", key="df")
+
+#%%
+outputfolder = Path("../data/experiments_uncertainty")
+system, phases = aggregate_tables(outputfolder)
+
+system.to_hdf(outputfolder / "system.h5", key="df")
+phases.to_hdf(outputfolder / "phases.h5", key="df")
