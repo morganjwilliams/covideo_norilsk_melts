@@ -5,9 +5,11 @@ from pyrolite.util.pd import read_table
 logger = stream_log("pyrolite-meltsutil", level="INFO")
 outputfolder = Path("../data/experiments")
 
+# Naldret 2004 compositions
 df = read_table("../data/starting_compositions.csv").rename(
     columns={"FeOt": "FeO", "LOI": "H2O"}
 )
+
 
 from pyrolite_meltsutil.env import MELTS_Env
 from pyrolite_meltsutil.automation import MeltsBatch
@@ -21,7 +23,6 @@ env.MINT = 500
 env.MAXT = 1500
 env.DELTAT = -10
 env.DELTAP = 0
-
 
 batch = MeltsBatch(
     df,
