@@ -1,0 +1,108 @@
+Title: Hr
+
+Pressure 500.00 Temperature 1523.15 
+Partition 100.115421 
+Bulk 100.115421 
+Liquid 100.082757 
+Solid 0.032664 
+water 0.032664 
+Pressure 500.00 Temperature 1513.15 
+Partition 100.116071 
+Bulk 100.116071 
+Liquid 100.087622 
+Solid 0.028450 
+water 0.028450 
+Pressure 500.00 Temperature 1503.15 
+Partition 100.116762 
+Bulk 100.116762 
+Liquid 100.092605 
+Solid 0.024157 
+water 0.024157 
+Pressure 500.00 Temperature 1493.15 
+Partition 100.117495 
+Bulk 100.117495 
+Liquid 100.097710 
+Solid 0.019784 
+water 0.019784 
+Pressure 500.00 Temperature 1483.15 
+Partition 100.118270 
+Bulk 100.118270 
+Liquid 100.102941 
+Solid 0.015329 
+water 0.015329 
+Pressure 500.00 Temperature 1473.15 
+Partition 100.119089 
+Bulk 100.119089 
+Liquid 100.108300 
+Solid 0.010788 
+water 0.010788 
+Pressure 500.00 Temperature 1463.15 
+Partition 100.119953 
+Bulk 100.119953 
+Liquid 100.113792 
+Solid 0.006161 
+water 0.006161 
+Pressure 500.00 Temperature 1453.15 
+Partition 100.120865 
+Bulk 100.120865 
+Liquid 100.119420 
+Solid 0.001445 
+water 0.001445 
+Pressure 500.00 Temperature 1443.15 
+Partition 100.121828 ---
+Bulk 100.121828 
+Liquid 100.121828 
+Solid 0.000000 ---
+Pressure 500.00 Temperature 1433.15 
+Partition 100.122842 ---
+Bulk 100.122842 
+Liquid 100.122842 
+Solid 0.000000 ---
+Pressure 500.00 Temperature 1423.15 
+Partition 100.123907 ---
+Bulk 100.123907 
+Liquid 100.123907 
+Solid 0.000000 ---
+Pressure 500.00 Temperature 1413.15 
+Partition 100.123960 
+Bulk 100.123960 
+Liquid 99.734794 
+Solid 0.389167 
+olivine_0 0.389167 
+Pressure 500.00 Temperature 1403.15 
+Partition 99.734609 
+Bulk 99.734609 
+Liquid 98.909051 
+Solid 0.825559 
+olivine_0 0.825559 
+Pressure 500.00 Temperature 1393.15 
+Partition 98.908885 
+Bulk 98.908885 
+Liquid 98.108362 
+Solid 0.800523 
+olivine_0 0.800523 
+Pressure 500.00 Temperature 1383.15 
+Partition 98.110035 
+Bulk 98.110035 
+Liquid 95.255887 
+Solid 2.854148 
+olivine_0 0.418699 
+clinopyroxene_0 2.424223 
+water 0.011226 
+Pressure 500.00 Temperature 1373.15 
+Partition 95.272108 
+Bulk 95.272108 
+Liquid 90.498467 
+Solid 4.773641 
+olivine_0 0.067541 
+clinopyroxene_0 4.635169 
+water 0.070931 
+Pressure 500.00 Temperature 1363.15 
+Partition 90.572273 
+Bulk 90.572273 
+Liquid 84.486367 
+Solid 6.085906 
+olivine_0 0.479912 
+clinopyroxene_0 3.741144 
+feldspar_0 1.700747 
+water 0.164103 

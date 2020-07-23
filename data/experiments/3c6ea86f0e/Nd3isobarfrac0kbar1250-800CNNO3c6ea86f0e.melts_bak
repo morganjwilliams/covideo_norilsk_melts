@@ -1,0 +1,20 @@
+Title: Nd3
+Initial Composition: SiO2 49.4882
+Initial Composition: TiO2 1.0345
+Initial Composition: Al2O3 15.8195
+Initial Composition: MnO 0.1757
+Initial Composition: MgO 6.4703
+Initial Composition: CaO 11.2327
+Initial Composition: Na2O 2.1568
+Initial Composition: K2O 0.6831
+Initial Composition: P2O5 0.1561
+Initial Composition: H2O 0
+Initial Composition: Cr2O3 0.0177
+Initial Composition: FeO 9.3277
+Initial Composition: Fe2O3 1.1518
+Initial Temperature: 1250
+Initial Pressure: 500
+Final Temperature: 800
+Log fO2 Path: NNO
+Mode: isobaric
+Mode: fractionate solids

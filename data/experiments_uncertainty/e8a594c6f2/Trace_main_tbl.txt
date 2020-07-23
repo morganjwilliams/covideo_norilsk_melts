@@ -1,0 +1,46 @@
+Title: Hr
+
+Pressure 500.00 Temperature 1523.15 
+Partition 98.097002 ---
+Bulk 98.097002 
+Liquid 98.097002 
+Solid 0.000000 ---
+Pressure 500.00 Temperature 1513.15 
+Partition 98.097654 ---
+Bulk 98.097654 
+Liquid 98.097654 
+Solid 0.000000 ---
+Pressure 500.00 Temperature 1503.15 
+Partition 98.098345 ---
+Bulk 98.098345 
+Liquid 98.098345 
+Solid 0.000000 ---
+Pressure 500.00 Temperature 1493.15 
+Partition 98.099078 ---
+Bulk 98.099078 
+Liquid 98.099078 
+Solid 0.000000 ---
+Pressure 500.00 Temperature 1483.15 
+Partition 98.099854 ---
+Bulk 98.099854 
+Liquid 98.099854 
+Solid 0.000000 ---
+Pressure 500.00 Temperature 1473.15 
+Partition 98.100516 
+Bulk 98.100516 
+Liquid 97.591050 
+Solid 0.509467 
+feldspar_0 0.509467 
+Pressure 500.00 Temperature 1463.15 
+Partition 97.591738 
+Bulk 97.591738 
+Liquid 93.995136 
+Solid 3.596602 
+feldspar_0 3.596602 
+Pressure 500.00 Temperature 1453.15 
+Partition 93.995313 
+Bulk 93.995313 
+Liquid 89.786966 
+Solid 4.208347 
+orthopyroxene_0 0.454074 
+feldspar_0 3.754273 
