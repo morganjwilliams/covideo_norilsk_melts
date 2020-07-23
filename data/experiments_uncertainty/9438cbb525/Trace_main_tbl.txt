@@ -1,0 +1,97 @@
+Title: Hr
+
+Pressure 500.00 Temperature 1523.15 
+Partition 100.111287 
+Bulk 100.111287 
+Liquid 99.908185 
+Solid 0.203102 
+water 0.203102 
+Pressure 500.00 Temperature 1513.15 
+Partition 100.111922 
+Bulk 100.111922 
+Liquid 99.913123 
+Solid 0.198800 
+water 0.198800 
+Pressure 500.00 Temperature 1503.15 
+Partition 100.112597 
+Bulk 100.112597 
+Liquid 99.918180 
+Solid 0.194417 
+water 0.194417 
+Pressure 500.00 Temperature 1493.15 
+Partition 100.113312 
+Bulk 100.113312 
+Liquid 99.923361 
+Solid 0.189951 
+water 0.189951 
+Pressure 500.00 Temperature 1483.15 
+Partition 100.114069 
+Bulk 100.114069 
+Liquid 99.928668 
+Solid 0.185401 
+water 0.185401 
+Pressure 500.00 Temperature 1473.15 
+Partition 100.114869 
+Bulk 100.114869 
+Liquid 99.934106 
+Solid 0.180763 
+water 0.180763 
+Pressure 500.00 Temperature 1463.15 
+Partition 100.115713 
+Bulk 100.115713 
+Liquid 99.939676 
+Solid 0.176037 
+water 0.176037 
+Pressure 500.00 Temperature 1453.15 
+Partition 100.116603 
+Bulk 100.116603 
+Liquid 99.945384 
+Solid 0.171219 
+water 0.171219 
+Pressure 500.00 Temperature 1443.15 
+Partition 100.117541 
+Bulk 100.117541 
+Liquid 99.951233 
+Solid 0.166308 
+water 0.166308 
+Pressure 500.00 Temperature 1433.15 
+Partition 100.118527 
+Bulk 100.118527 
+Liquid 99.957227 
+Solid 0.161300 
+water 0.161300 
+Pressure 500.00 Temperature 1423.15 
+Partition 100.119564 
+Bulk 100.119564 
+Liquid 99.963370 
+Solid 0.156193 
+water 0.156193 
+Pressure 500.00 Temperature 1413.15 
+Partition 100.120653 
+Bulk 100.120653 
+Liquid 99.969667 
+Solid 0.150986 
+water 0.150986 
+Pressure 500.00 Temperature 1403.15 
+Partition 100.120832 
+Bulk 100.120832 
+Liquid 99.627919 
+Solid 0.492913 
+olivine_0 0.345611 
+water 0.147302 
+Pressure 500.00 Temperature 1393.15 
+Partition 100.119835 
+Bulk 100.119835 
+Liquid 98.588897 
+Solid 1.530938 
+olivine_0 1.111251 
+clinopyroxene_0 0.270436 
+water 0.149251 
+Pressure 500.00 Temperature 1383.15 
+Partition 100.122644 
+Bulk 100.122644 
+Liquid 93.247988 
+Solid 6.874656 
+olivine_0 1.199645 
+clinopyroxene_0 5.458205 
+water 0.216805 

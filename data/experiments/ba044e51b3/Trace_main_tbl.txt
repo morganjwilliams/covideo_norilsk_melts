@@ -1,0 +1,443 @@
+Title: Mr2
+
+Pressure 500.00 Temperature 1523.15 
+Partition 98.127434 ---
+Bulk 98.127434 
+Liquid 98.127434 
+Solid 0.000000 ---
+Pressure 500.00 Temperature 1513.15 
+Partition 98.128034 ---
+Bulk 98.128034 
+Liquid 98.128034 
+Solid 0.000000 ---
+Pressure 500.00 Temperature 1503.15 
+Partition 98.128671 ---
+Bulk 98.128671 
+Liquid 98.128671 
+Solid 0.000000 ---
+Pressure 500.00 Temperature 1493.15 
+Partition 98.129346 ---
+Bulk 98.129346 
+Liquid 98.129346 
+Solid 0.000000 ---
+Pressure 500.00 Temperature 1483.15 
+Partition 98.130061 ---
+Bulk 98.130061 
+Liquid 98.130061 
+Solid 0.000000 ---
+Pressure 500.00 Temperature 1473.15 
+Partition 98.130816 ---
+Bulk 98.130816 
+Liquid 98.130816 
+Solid 0.000000 ---
+Pressure 500.00 Temperature 1463.15 
+Partition 98.131613 ---
+Bulk 98.131613 
+Liquid 98.131613 
+Solid 0.000000 ---
+Pressure 500.00 Temperature 1453.15 
+Partition 98.132453 ---
+Bulk 98.132453 
+Liquid 98.132453 
+Solid 0.000000 ---
+Pressure 500.00 Temperature 1443.15 
+Partition 98.133337 ---
+Bulk 98.133337 
+Liquid 98.133337 
+Solid 0.000000 ---
+Pressure 500.00 Temperature 1433.15 
+Partition 98.134267 ---
+Bulk 98.134267 
+Liquid 98.134267 
+Solid 0.000000 ---
+Pressure 500.00 Temperature 1423.15 
+Partition 98.135245 ---
+Bulk 98.135245 
+Liquid 98.135245 
+Solid 0.000000 ---
+Pressure 500.00 Temperature 1413.15 
+Partition 98.133962 
+Bulk 98.133962 
+Liquid 91.149206 
+Solid 6.984756 
+olivine_0 0.692521 
+clinopyroxene_0 3.525255 
+feldspar_0 2.766980 
+Pressure 500.00 Temperature 1403.15 
+Partition 91.149965 
+Bulk 91.149965 
+Liquid 83.902458 
+Solid 7.247507 
+olivine_0 0.880330 
+clinopyroxene_0 3.260503 
+feldspar_0 3.106674 
+Pressure 500.00 Temperature 1393.15 
+Partition 83.907757 
+Bulk 83.907757 
+Liquid 77.554983 
+Solid 6.352774 
+olivine_0 0.731592 
+clinopyroxene_0 2.866101 
+feldspar_0 2.612530 
+spinel_0 0.142551 
+Pressure 500.00 Temperature 1383.15 
+Partition 77.560336 
+Bulk 77.560336 
+Liquid 72.157234 
+Solid 5.403102 
+olivine_0 0.647513 
+clinopyroxene_0 2.389836 
+feldspar_0 2.265307 
+spinel_0 0.100445 
+Pressure 500.00 Temperature 1373.15 
+Partition 72.166225 
+Bulk 72.166225 
+Liquid 67.289101 
+Solid 4.877123 
+olivine_0 0.558111 
+clinopyroxene_0 2.135632 
+feldspar_0 1.982990 
+spinel_0 0.200390 
+Pressure 500.00 Temperature 1363.15 
+Partition 67.334603 
+Bulk 67.334603 
+Liquid 61.191930 
+Solid 6.142674 
+olivine_0 0.308413 
+clinopyroxene_0 2.756318 
+feldspar_0 1.806674 
+spinel_0 1.271269 
+Pressure 500.00 Temperature 1353.15 
+Partition 61.245129 
+Bulk 61.245129 
+Liquid 55.388612 
+Solid 5.856517 
+olivine_0 0.155442 
+clinopyroxene_0 2.522877 
+feldspar_0 1.673172 
+spinel_0 1.505026 
+Pressure 500.00 Temperature 1343.15 
+Partition 55.427797 
+Bulk 55.427797 
+Liquid 50.849579 
+Solid 4.578218 
+olivine_0 0.132220 
+clinopyroxene_0 1.842702 
+feldspar_0 1.508090 
+spinel_0 1.095207 
+Pressure 500.00 Temperature 1333.15 
+Partition 50.879153 
+Bulk 50.879153 
+Liquid 46.892055 
+Solid 3.987097 
+orthopyroxene_0 0.511167 
+clinopyroxene_0 1.058973 
+feldspar_0 1.595795 
+spinel_0 0.821162 
+Pressure 500.00 Temperature 1323.15 
+Partition 46.915717 
+Bulk 46.915717 
+Liquid 43.469861 
+Solid 3.445856 
+orthopyroxene_0 0.499155 
+clinopyroxene_0 0.747667 
+feldspar_0 1.544019 
+spinel_0 0.647957 
+water 0.007059 
+Pressure 500.00 Temperature 1313.15 
+Partition 43.498556 
+Bulk 43.498556 
+Liquid 39.035501 
+Solid 4.463055 
+orthopyroxene_0 0.825699 
+clinopyroxene_0 0.413634 
+feldspar_0 2.505552 
+spinel_0 0.626774 
+water 0.091396 
+Pressure 500.00 Temperature 1303.15 
+Partition 39.143941 
+Bulk 39.143941 
+Liquid 35.525018 
+Solid 3.618923 
+orthopyroxene_0 0.635692 
+clinopyroxene_0 0.268758 
+feldspar_0 2.077062 
+spinel_0 0.477264 
+water 0.160146 
+Pressure 500.00 Temperature 1293.15 
+Partition 35.699095 
+Bulk 35.699095 
+Liquid 32.663867 
+Solid 3.035228 
+orthopyroxene_0 0.501016 
+clinopyroxene_0 0.181118 
+feldspar_0 1.761417 
+spinel_0 0.374022 
+water 0.217654 
+Pressure 500.00 Temperature 1283.15 
+Partition 32.893255 
+Bulk 32.893255 
+Liquid 30.279289 
+Solid 2.613966 
+orthopyroxene_0 0.401552 
+clinopyroxene_0 0.126972 
+feldspar_0 1.519067 
+spinel_0 0.299670 
+water 0.266705 
+Pressure 500.00 Temperature 1273.15 
+Partition 30.556125 
+Bulk 30.556125 
+Liquid 28.257024 
+Solid 2.299101 
+orthopyroxene_0 0.325735 
+clinopyroxene_0 0.093158 
+feldspar_0 1.326741 
+spinel_0 0.244299 
+water 0.309168 
+Pressure 500.00 Temperature 1263.15 
+Partition 28.575124 
+Bulk 28.575124 
+Liquid 26.518475 
+Solid 2.056648 
+orthopyroxene_0 0.266462 
+clinopyroxene_0 0.072070 
+feldspar_0 1.169837 
+spinel_0 0.201932 
+water 0.346348 
+Pressure 500.00 Temperature 1253.15 
+Partition 26.872836 
+Bulk 26.872836 
+Liquid 25.007409 
+Solid 1.865427 
+orthopyroxene_0 0.219253 
+clinopyroxene_0 0.059025 
+feldspar_0 1.039148 
+spinel_0 0.168811 
+water 0.379191 
+Pressure 500.00 Temperature 1243.15 
+Partition 25.393899 
+Bulk 25.393899 
+Liquid 23.682254 
+Solid 1.711645 
+orthopyroxene_0 0.181127 
+clinopyroxene_0 0.051079 
+feldspar_0 0.928565 
+spinel_0 0.142463 
+water 0.408410 
+Pressure 500.00 Temperature 1233.15 
+Partition 24.097400 
+Bulk 24.097400 
+Liquid 22.511403 
+Solid 1.585997 
+orthopyroxene_0 0.150012 
+clinopyroxene_0 0.046349 
+feldspar_0 0.833872 
+spinel_0 0.121205 
+water 0.434559 
+Pressure 500.00 Temperature 1223.15 
+Partition 22.952248 
+Bulk 22.952248 
+Liquid 21.470245 
+Solid 1.482003 
+orthopyroxene_0 0.124412 
+clinopyroxene_0 0.043622 
+feldspar_0 0.752045 
+spinel_0 0.103850 
+water 0.458075 
+Pressure 500.00 Temperature 1213.15 
+Partition 21.934242 
+Bulk 21.934242 
+Liquid 20.539229 
+Solid 1.395013 
+orthopyroxene_0 0.103217 
+clinopyroxene_0 0.042110 
+feldspar_0 0.680831 
+spinel_0 0.089540 
+water 0.479315 
+Pressure 500.00 Temperature 1203.15 
+Partition 21.024172 
+Bulk 21.024172 
+Liquid 19.702573 
+Solid 1.321599 
+orthopyroxene_0 0.085579 
+clinopyroxene_0 0.041308 
+feldspar_0 0.618499 
+spinel_0 0.077640 
+water 0.498573 
+Pressure 500.00 Temperature 1193.15 
+Partition 20.206531 
+Bulk 20.206531 
+Liquid 18.947357 
+Solid 1.259174 
+orthopyroxene_0 0.070836 
+clinopyroxene_0 0.040894 
+feldspar_0 0.563681 
+spinel_0 0.067670 
+water 0.516093 
+Pressure 500.00 Temperature 1183.15 
+Partition 19.468635 
+Bulk 19.468635 
+Liquid 18.262888 
+Solid 1.205747 
+orthopyroxene_0 0.058468 
+clinopyroxene_0 0.040664 
+feldspar_0 0.515269 
+spinel_0 0.059263 
+water 0.532083 
+Pressure 500.00 Temperature 1173.15 
+Partition 18.799990 
+Bulk 18.799990 
+Liquid 17.640233 
+Solid 1.159758 
+orthopyroxene_0 0.048057 
+clinopyroxene_0 0.040496 
+feldspar_0 0.472355 
+spinel_0 0.052131 
+water 0.546718 
+Pressure 500.00 Temperature 1163.15 
+Partition 18.191832 
+Bulk 18.191832 
+Liquid 17.071864 
+Solid 1.119968 
+orthopyroxene_0 0.039269 
+clinopyroxene_0 0.040316 
+feldspar_0 0.434182 
+spinel_0 0.046049 
+water 0.560151 
+Pressure 500.00 Temperature 1153.15 
+Partition 17.636779 
+Bulk 17.636779 
+Liquid 16.551398 
+Solid 1.085381 
+orthopyroxene_0 0.031830 
+clinopyroxene_0 0.040085 
+feldspar_0 0.400117 
+spinel_0 0.040838 
+water 0.572510 
+Pressure 500.00 Temperature 1143.15 
+Partition 17.128575 
+Bulk 17.128575 
+Liquid 16.073389 
+Solid 1.055186 
+orthopyroxene_0 0.025517 
+clinopyroxene_0 0.039784 
+feldspar_0 0.369623 
+spinel_0 0.036352 
+water 0.583910 
+Pressure 500.00 Temperature 1133.15 
+Partition 16.661882 
+Bulk 16.661882 
+Liquid 15.633160 
+Solid 1.028722 
+orthopyroxene_0 0.020150 
+clinopyroxene_0 0.039406 
+feldspar_0 0.342243 
+spinel_0 0.032476 
+water 0.594447 
+Pressure 500.00 Temperature 1123.15 
+Partition 16.232120 
+Bulk 16.232120 
+Liquid 15.226679 
+Solid 1.005441 
+orthopyroxene_0 0.015576 
+clinopyroxene_0 0.038954 
+feldspar_0 0.317589 
+spinel_0 0.029115 
+water 0.604208 
+Pressure 500.00 Temperature 1113.15 
+Partition 15.835340 
+Bulk 15.835340 
+Liquid 14.850452 
+Solid 0.984888 
+orthopyroxene_0 0.011673 
+clinopyroxene_0 0.038432 
+feldspar_0 0.295326 
+spinel_0 0.026189 
+water 0.613268 
+Pressure 500.00 Temperature 1103.15 
+Partition 15.468050 
+Bulk 15.468050 
+Liquid 14.499671 
+Solid 0.968379 
+orthopyroxene_0 0.010020 
+clinopyroxene_0 0.036850 
+feldspar_0 0.276583 
+spinel_0 0.020755 
+rhm-oxide_0 0.002464 
+water 0.621707 
+Pressure 500.00 Temperature 1093.15 
+Partition 15.126454 
+Bulk 15.126454 
+Liquid 14.168445 
+Solid 0.958008 
+orthopyroxene_0 0.012257 
+clinopyroxene_0 0.033143 
+feldspar_0 0.262169 
+spinel_0 0.010334 
+rhm-oxide_0 0.010499 
+water 0.629607 
+Pressure 500.00 Temperature 1083.15 
+Partition 14.802607 
+Bulk 14.802607 
+Liquid 13.838649 
+Solid 0.963958 
+olivine_0 0.031644 
+clinopyroxene_0 0.023381 
+feldspar_0 0.259613 
+rhm-oxide_0 0.011393 
+water 0.637927 
+Pressure 500.00 Temperature 1073.15 
+Partition 14.480096 
+Bulk 14.480096 
+Liquid 13.524182 
+Solid 0.955914 
+olivine_0 0.036678 
+clinopyroxene_0 0.015687 
+feldspar_0 0.248237 
+rhm-oxide_0 0.009316 
+water 0.645995 
+Pressure 500.00 Temperature 1063.15 
+Partition 14.173736 
+Bulk 14.173736 
+Liquid 13.230870 
+Solid 0.942866 
+olivine_0 0.032694 
+clinopyroxene_0 0.015398 
+feldspar_0 0.229921 
+rhm-oxide_0 0.008427 
+apatite 0.002941 
+water 0.653485 
+Pressure 500.00 Temperature 1053.15 
+Partition 13.888955 
+Bulk 13.888955 
+Liquid 12.960974 
+Solid 0.927981 
+olivine_0 0.028758 
+clinopyroxene_0 0.015339 
+feldspar_0 0.213268 
+rhm-oxide_0 0.007628 
+apatite 0.002581 
+water 0.660407 
+Pressure 500.00 Temperature 1043.15 
+Partition 13.626019 
+Bulk 13.626019 
+Liquid 12.712154 
+Solid 0.913865 
+olivine_0 0.025334 
+clinopyroxene_0 0.015106 
+feldspar_0 0.198238 
+rhm-oxide_0 0.006932 
+apatite 0.001441 
+water 0.666814 
+Pressure 500.00 Temperature 1033.15 
+Partition 13.383326 
+Bulk 13.383326 
+Liquid 11.550169 
+Solid 1.833157 
+olivine_0 0.041664 
+clinopyroxene_0 0.030844 
+feldspar_0 0.431201 
+quartz 0.599383 
+rhm-oxide_0 0.009654 
+apatite 0.023700 
+water 0.696711 

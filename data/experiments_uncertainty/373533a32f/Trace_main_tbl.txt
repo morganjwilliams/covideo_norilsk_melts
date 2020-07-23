@@ -1,0 +1,74 @@
+Title: Hr
+
+Pressure 500.00 Temperature 1523.15 
+Partition 100.115188 
+Bulk 100.115188 
+Liquid 99.931212 
+Solid 0.183977 
+water 0.183977 
+Pressure 500.00 Temperature 1513.15 
+Partition 100.115833 
+Bulk 100.115833 
+Liquid 99.935961 
+Solid 0.179872 
+water 0.179872 
+Pressure 500.00 Temperature 1503.15 
+Partition 100.116518 
+Bulk 100.116518 
+Liquid 99.940827 
+Solid 0.175691 
+water 0.175691 
+Pressure 500.00 Temperature 1493.15 
+Partition 100.117244 
+Bulk 100.117244 
+Liquid 99.945812 
+Solid 0.171431 
+water 0.171431 
+Pressure 500.00 Temperature 1483.15 
+Partition 100.118012 
+Bulk 100.118012 
+Liquid 99.950919 
+Solid 0.167092 
+water 0.167092 
+Pressure 500.00 Temperature 1473.15 
+Partition 100.118823 
+Bulk 100.118823 
+Liquid 99.956152 
+Solid 0.162671 
+water 0.162671 
+Pressure 500.00 Temperature 1463.15 
+Partition 100.119680 
+Bulk 100.119680 
+Liquid 99.961514 
+Solid 0.158165 
+water 0.158165 
+Pressure 500.00 Temperature 1453.15 
+Partition 100.120583 
+Bulk 100.120583 
+Liquid 99.967009 
+Solid 0.153574 
+water 0.153574 
+Pressure 500.00 Temperature 1443.15 
+Partition 100.121534 
+Bulk 100.121534 
+Liquid 99.972640 
+Solid 0.148894 
+water 0.148894 
+Pressure 500.00 Temperature 1433.15 
+Partition 100.122535 
+Bulk 100.122535 
+Liquid 99.978411 
+Solid 0.144124 
+water 0.144124 
+Pressure 500.00 Temperature 1423.15 
+Partition 100.123587 
+Bulk 100.123587 
+Liquid 99.984327 
+Solid 0.139260 
+water 0.139260 
+Pressure 500.00 Temperature 1413.15 
+Partition 100.124692 
+Bulk 100.124692 
+Liquid 99.990390 
+Solid 0.134302 
+water 0.134302 

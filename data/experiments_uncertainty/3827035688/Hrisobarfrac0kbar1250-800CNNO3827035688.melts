@@ -1,0 +1,19 @@
+Title: Hr
+Initial Composition: SiO2 47.73151541339733
+Initial Composition: TiO2 1.3502051655735374
+Initial Composition: Al2O3 15.565908999865854
+Initial Composition: Fe2O3 1.3596914911310356
+Initial Composition: FeO 11.111898417006165
+Initial Composition: MnO 0.19311985240086227
+Initial Composition: MgO 7.283517809757546
+Initial Composition: CaO 10.688104233630801
+Initial Composition: Na2O 2.1756960637235094
+Initial Composition: K2O 0.3410521627102112
+Initial Composition: P2O5 0.1571714483977017
+Initial Composition: H2O 2.042118942405434
+Initial Temperature: 1250
+Initial Pressure: 500
+Final Temperature: 800
+Log fO2 Path: NNO
+Mode: isobaric
+Mode: fractionate solids

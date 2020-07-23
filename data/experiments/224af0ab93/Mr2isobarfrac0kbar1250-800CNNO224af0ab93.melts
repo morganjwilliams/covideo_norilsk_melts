@@ -1,0 +1,20 @@
+Title: Mr2
+Initial Composition: SiO2 48.546839740711185
+Initial Composition: TiO2 1.1351407800690378
+Initial Composition: Al2O3 15.81368534992729
+Initial Composition: MnO 0.19571392759811002
+Initial Composition: MgO 7.280558106649691
+Initial Composition: CaO 11.312265015170757
+Initial Composition: Na2O 1.9962820615007217
+Initial Composition: K2O 0.332713676916787
+Initial Composition: P2O5 0.12721405293877153
+Initial Composition: H2O 1.986496365120816
+Initial Composition: Cr2O3 0.0194511837772653
+Initial Composition: FeO 10.00489597881538
+Initial Composition: Fe2O3 1.2354352137275264
+Initial Temperature: 1250
+Initial Pressure: 500
+Final Temperature: 800
+Log fO2 Path: NNO
+Mode: isobaric
+Mode: fractionate solids
