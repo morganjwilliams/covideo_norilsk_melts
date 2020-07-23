@@ -22,6 +22,8 @@ from mod.sequence import (
     get_assemblage_sequence,
     sequence_distance,
 )
+from pyrolite_meltsutil.util.tables import phasename
+from collections import Counter
 
 outputfolder = Path("../data/experiments_uncertainty")
 
@@ -30,9 +32,7 @@ system, phases = (
     pd.read_hdf(outputfolder / "phases.h5"),
 )
 cfg = import_batch_config(outputfolder)
-
 #%%
-
 exprs = [
     hsh
     for (hsh, (name, c, e)) in cfg.items()
@@ -53,12 +53,17 @@ phaselist = [
 ]
 
 fig, ax = plt.subplots(
-    len(phaselist) // 3, 3, sharex=True, sharey=True, figsize=(10, 6)
+    len(phaselist) // 2, 2, sharex=True, sharey=True, figsize=(8, 8)
 )
 xvar, yvar = "temperature", "volume%"
 [a.set_xlabel(xvar) for a in ax[-1, :]]
 [a.set_ylabel(yvar) for a in ax[:, 0]]
-
+name_counter = Counter(
+    [
+        phasename(pID)
+        for pID in phases.phaseID.unique()[~pd.isnull(phases.phaseID.unique())]
+    ]
+)
 for p, pax in zip(phaselist, ax.flat):
     pdf = phases.loc[(phases.phase == p) & (phases.experiment.isin(exprs)), :]
     proxies = {}
@@ -67,21 +72,25 @@ for p, pax in zip(phaselist, ax.flat):
         for expr in pdf.experiment.unique():
             e_p_df = pdf.loc[((pdf.phaseID == phaseID) & (pdf.experiment == expr)), :]
             pax.plot(e_p_df[xvar], e_p_df[yvar], **style)
-            proxies[phaseID] = proxy_line(**style)
+            name = (
+                phasename(phaseID)
+                if ((name_counter[phasename(phaseID)] == 1) or (phaseID.endswith("_0")))
+                else phaseID
+            )
+            proxies[name] = proxy_line(**style)
 
     pax.legend(
         proxies.values(),
         proxies.keys(),
-        frameon=False,
-        facecolor=None,
         bbox_to_anchor=None,
         loc="best",
+        fontsize="large",
     )
 
 plt.tight_layout()
 
 save_figure(
-    fig, name="Batch_Uncertainty_Dry", save_at="../img/", save_fmts=["png", "pdf"]
+    fig, name="Batch_Uncertainty_1Wt%H2O", save_at="../img/", save_fmts=["png", "pdf"]
 )
 #%%
 
@@ -91,7 +100,7 @@ better_models = sorted(
             e,
             sequence_distance(
                 phases.loc[phases.experiment == e],
-                ["liquid", "olivine", "clinopyroxene", "orthopyroxene", "feldspar",],
+                ["liquid", "olivine", "feldspar", "clinopyroxene", "orthopyroxene",],
                 ignore_trailing=True,
             )[-1],
         )
@@ -99,7 +108,6 @@ better_models = sorted(
     ],
     key=lambda x: x[1],
 )
-
 
 fig, ax = plt.subplots(1)
 

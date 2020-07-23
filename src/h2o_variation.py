@@ -42,9 +42,13 @@ fig, ax = _phasevolumes(
 for a, expr in zip(ax, exprs):
     name, config, env = cfg[expr]
     a.set_title(
-        "$\mathrm{H_2O=" + "{}".format(config.get("H2O", 0) // 1.0) + "}$ Wt%",
+        "$\mathrm{H_2O="
+        + "{:.1f}".format(np.round(config.get("H2O", 0), 1))
+        + "}$ Wt%",
         y=1.05,
         fontsize="x-large",
     )
 
-save_figure(fig, name="Mr2_H2O_variation", save_at="../img/", save_fmts=["png", "pdf"])
+save_figure(
+    fig, name="Mr2_H2O_variation", save_at="../img/", save_fmts=["png", "pdf"], dpi=800
+)

@@ -17,6 +17,7 @@ def _phasevolumes(
     unit_size=5,
     aspect=0.8,
     exprs=None,
+    legend_on=None,
 ):
     if exprs is None:
         exprs = phases["experiment"].unique()
@@ -43,10 +44,9 @@ def _phasevolumes(
             }
         )
         plot_phasevolumes(expdf, marker=None, ax=ax[ix], lw=4, legend=False)
-        ax[ix].set_title(exp_config["Title"])
+        ax[ix].set_title(exp_config["Suite"] + ": " + exp_config["Title"])
 
         modes = exp_config["modes"]
-
     all_phaseIDs = sorted(
         [
             (p, np.mean([s.get(p, len(s.keys()) + 1) for s in sequences]))
@@ -67,7 +67,10 @@ def _phasevolumes(
         k: proxy_line(color=phase_color(k), ls=phaseID_linestyle(k), lw=4)
         for k, pos in all_phaseIDs
     }
-    ax[n_across - 1].legend(proxies.values(), proxies.keys(), fontsize="large")
+    if legend_on is None:
+        ax[n_across - 1].legend(proxies.values(), proxies.keys(), fontsize="large")
+    else:
+        ax[legend_on].legend(proxies.values(), proxies.keys(), fontsize="large")
     plt.subplots_adjust(hspace=0.3)
     return fig, ax
 

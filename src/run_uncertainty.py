@@ -11,7 +11,7 @@ from pyrolite.util.plot import save_figure
 np.random.seed(32)
 
 
-def blur_compositions(df, noise=0.05, scale=100):
+def blur_compositions(df, noise=0.02, scale=100):
     """
     Function to add 'compositional noise' to a set of compositions. In reality, it's
     its best to use measured uncertainties to generate these simulated compositions.
@@ -34,7 +34,20 @@ reps = 10  # increase this to perform more experiments
 df = accumulate([df.iloc[[-1], :]] * reps)
 df = df.reset_index()  # .drop(columns="index")
 df.pyrochem.compositional = blur_compositions(df.pyrochem.compositional)
-ax = df[["Al2O3", "CaO", "SiO2"]].pyroplot.scatter(s=5, c="k", alpha=0.5)
+
+styles = {
+    "Nadezhdinsky": {"c": "yellow", "marker": "D"},
+    "Morongovsky": {"c": "lime", "marker": "D"},
+    "Mokulaevsky": {"c": "lime", "marker": "s"},
+    "Kharaelakhsky": {"c": "lime", "marker": "o"},
+}
+
+ax = df[["Al2O3", "CaO", "SiO2"]].pyroplot.scatter(
+    s=30, alpha=0.5, edgecolors='k', **styles["Morongovsky"]
+)
+ax.legend(
+    ["Morongovsky #2"], fontsize="x-large", markerscale=2, bbox_to_anchor=(0.75, 1)
+)
 save_figure(
     ax.figure,
     name="Mr2_Uncertainty_Distribution",

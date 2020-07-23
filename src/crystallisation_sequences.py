@@ -11,6 +11,12 @@ from pyrolite_meltsutil.tables.load import import_batch_config
 from pyrolite_meltsutil.vis.style import COLORS
 from mod.vis.phasevolumes import _phasevolumes
 
+from mod.sequence import (
+    get_appearance_sequence,
+    get_assemblage_sequence,
+    sequence_distance,
+)
+
 outputfolder = Path("../data/experiments")
 
 system, phases = (
@@ -34,8 +40,12 @@ fig, ax = _phasevolumes(
     n_across=4,
     aspect=1,
     unit_size=5,
+    exprs=sorted(exprs, key=lambda x: cfg[x][1]["Title"]),
+    legend_on=-2,
 )
-save_figure(fig, name="Batch_Dry", save_at="../img/", save_fmts=["png", "pdf"])
+
+ax[-1].axis("off")
+save_figure(fig, name="Batch_Dry", save_at="../img/", save_fmts=["png", "pdf"], dpi=800)
 #%%
 exprs = [
     hsh
@@ -51,8 +61,24 @@ fig, ax = _phasevolumes(
     n_across=4,
     aspect=1,
     unit_size=5,
+    exprs=sorted(exprs, key=lambda x: cfg[x][1]["Title"]),
+    legend_on=-2,
 )
-save_figure(fig, name="Batch_1Wt%H2O", save_at="../img/", save_fmts=["png", "pdf"])
+ax[-1].axis("off")
+save_figure(fig, name="Batch_1Wt%H2O", save_at="../img/", save_fmts=["png", "pdf"], dpi=800)
+fig, ax = _phasevolumes(
+    phases.loc[phases.experiment.isin(exprs)],
+    config=cfg,
+    n_across=4,
+    aspect=1,
+    unit_size=5,
+    exprs=sorted(exprs, key=lambda x: cfg[x][1]["Title"]),
+    legend_on=0,
+)
+[a.set_visible(False) for a in ax[1:]]
+save_figure(
+    fig, name="Batch_1Wt%H2O_start", save_at="../img/", save_fmts=["png", "pdf"], dpi=1000
+)
 
 #%%
 
@@ -70,16 +96,14 @@ fig, ax = _phasevolumes(
     n_across=4,
     aspect=1,
     unit_size=5,
+    exprs=sorted(exprs, key=lambda x: cfg[x][1]["Title"]),
+    legend_on=-2,
 )
-save_figure(fig, name="Frac_1wt%H2O", save_at="../img/", save_fmts=["png", "pdf"])
+ax[-1].axis("off")
+save_figure(fig, name="Frac_1wt%H2O", save_at="../img/", save_fmts=["png", "pdf"], dpi=800)
 
 #%%
-#%%
-from mod.sequence import (
-    get_appearance_sequence,
-    get_assemblage_sequence,
-    sequence_distance,
-)
+from mod.sequence import sequence_distance
 
 sequence_distance(
     phases.loc[phases.experiment == exprs[0]],
@@ -101,7 +125,7 @@ better_models = sorted(
             e,
             sequence_distance(
                 phases.loc[phases.experiment == e],
-                ["liquid", "olivine", "clinopyroxene", "orthopyroxene", "feldspar",],
+                ["liquid", "olivine", "feldspar", "clinopyroxene", "orthopyroxene",],
                 ignore_trailing=True,
             )[-1],
         )
@@ -109,6 +133,8 @@ better_models = sorted(
     ],
     key=lambda x: x[1],
 )
+
+[(cfg[m][1]["Suite"], cfg[m][1]["Title"], d) for m, d in better_models][:10]
 
 fig, ax = plt.subplots(1)
 

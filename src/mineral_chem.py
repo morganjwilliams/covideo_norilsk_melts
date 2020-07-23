@@ -7,8 +7,10 @@ import matplotlib.pyplot as plt
 from pyrolite_meltsutil.tables.load import import_batch_config
 from pyrolite_meltsutil.vis.style import COLORS
 
+from pyrolite.util.plot.style import mappable_from_values
+from pyrolite.util.plot.helpers import add_colorbar
 import matplotlib.colors
-from pyrolite.util.plot import save_figure
+from pyrolite.util.plot import save_figure, save_axes
 
 outputfolder = Path("../data/experiments")
 
@@ -23,6 +25,25 @@ exprs = [
     for (hsh, (name, c, e)) in cfg.items()
     if ((c["modes"] == ["isobaric"]) and (hsh in phases.experiment.unique()))
 ]
+
+phases = phases.loc[phases.experiment.isin(exprs)]
+
+ndexprs = phases.experiment.isin(
+    [
+        hsh
+        for (hsh, (name, c, e)) in cfg.items()
+        if (c["Title"].startswith("Nd") and (hsh in phases.experiment.unique()))
+    ]
+)
+
+greenexprs = phases.experiment.isin(
+    [
+        hsh
+        for (hsh, (name, c, e)) in cfg.items()
+        if ((not c["Title"].startswith("Nd")) and (hsh in phases.experiment.unique()))
+    ]
+)
+
 nexps = len(exprs)
 
 exp_cpx = phases.phase.isin(["clinopyroxene"])
@@ -67,18 +88,45 @@ targets = ["Al2O3", "CaO", "MgO"]
 fig, ax = plt.subplots(1, 2, figsize=(8, 4), subplot_kw={"projection": "ternary"})
 ax[0].set_title("Clinopyroxene", **title_kw)
 ax[1].set_title("Orthopyroxene", **title_kw)
-phases.loc[exp_cpx, targets].pyroplot.scatter(
-    ax=ax[0], c=phases.loc[exp_cpx, "temperature"], cmap="Greens", s=3
-)
-phases.loc[exp_opx, targets].pyroplot.scatter(
-    ax=ax[1], c=phases.loc[exp_opx, "temperature"], cmap="Purples", s=2
-)
+
+for fltr, cmap in [(ndexprs, "plasma"), (greenexprs, "viridis")]:
+    phases.loc[exp_cpx & fltr, targets].pyroplot.scatter(
+        ax=ax[0], c=phases.loc[exp_cpx & fltr, "temperature"], s=3, cmap=cmap
+    )
+    phases.loc[exp_opx & fltr, targets].pyroplot.scatter(
+        ax=ax[1], c=phases.loc[exp_opx & fltr, "temperature"], s=3, cmap=cmap
+    )
+
 minchem.loc[clinopyroxene, targets].pyroplot.density(ax=ax[0], **density_kw)
 minchem.loc[orthopyroxene, targets].pyroplot.density(ax=ax[1], **density_kw)
 
 plt.tight_layout()
 
-save_figure(fig, name="Pyroxenes", save_at="../img", save_fmts=["png", "pdf"])
+save_figure(
+    fig, name="Pyroxenes-Ternary", save_at="../img", save_fmts=["png", "pdf"], dpi=600
+)
+#%%
+targets = ["Mg#", "Al2O3"]
+fig, ax = plt.subplots(1, 2, sharex=True, sharey=True, figsize=(11, 4))
+ax[0].set_title("Clinopyroxene", fontsize="x-large")
+ax[1].set_title("Orthopyroxene", fontsize="x-large")
+for fltr, cmap in [(ndexprs, "plasma"), (greenexprs, "viridis")]:
+    phases.loc[exp_cpx & fltr, targets].pyroplot.scatter(
+        ax=ax[0], c=phases.loc[exp_cpx & fltr, "temperature"], s=3, cmap=cmap
+    )
+    phases.loc[exp_opx & fltr, targets].pyroplot.scatter(
+        ax=ax[1], c=phases.loc[exp_opx & fltr, "temperature"], s=3, cmap=cmap
+    )
+
+minchem.loc[clinopyroxene, targets].pyroplot.density(ax=ax[0], **density_kw)
+minchem.loc[orthopyroxene, targets].pyroplot.density(ax=ax[1], **density_kw)
+ax[0].set_ylim(0, 6)
+
+plt.subplots_adjust(wspace=0.2)
+cb = fig.colorbar(mappable_from_values(phases.loc[exp_opx, "temperature"]), ax=ax)
+cb.set_label("Temperature", rotation=270, labelpad=20)
+save_figure(fig, name="Pyroxenes", save_at="../img", save_fmts=["png", "pdf"], dpi=800)
+
 #%%
 targets = ["Al2O3", "CaO", "Na2O"]
 
@@ -89,75 +137,71 @@ ax = phases.loc[exp_feldspar, targets].pyroplot.scatter(
     ax=ax, c=phases.loc[exp_feldspar, "temperature"],
 )
 
-save_figure(fig, name="Feldspar", save_at="../img", save_fmts=["png", "pdf"])
+save_figure(fig, name="Feldspar", save_at="../img", save_fmts=["png", "pdf"], dpi=800)
 #%%
-targets = [
-    "SiO2",
-    "MgO",
-    "FeO",
-]
+targets = ["Cr2O3", "Al2O3", "FeO"]
 
-fig, ax = plt.subplots(1)
+fig, ax = plt.subplots(1, 2, subplot_kw={"projection": "ternary"}, figsize=(8, 4))
 
-ax = minchem.loc[olivine, targets].pyroplot.density(ax=ax, **density_kw)
-ax = phases.loc[exp_olivine, targets].pyroplot.scatter(
-    ax=ax, c=phases.loc[exp_olivine, "temperature"]
-)
-ax.set_title("Olivine", **title_kw)
-save_figure(fig, name="Olivine", save_at="../img", save_fmts=["png", "pdf"])
+for fltr, cmap in [(ndexprs, "plasma"), (greenexprs, "viridis")]:
+    phases.loc[exp_spinel & fltr, targets].pyroplot.scatter(
+        ax=ax[0], c=phases.loc[exp_spinel & fltr, "temperature"], s=3, cmap=cmap
+    )
+
+spinel_chem.loc[:, targets].pyroplot.density(ax=ax[0], **density_kw)
+
+targets = ["Cr2O3", "Al2O3", "MgO"]
+for fltr, cmap in [(ndexprs, "plasma"), (greenexprs, "viridis")]:
+    phases.loc[exp_spinel & fltr, targets].pyroplot.scatter(
+        ax=ax[1], c=phases.loc[exp_spinel & fltr, "temperature"], s=3, cmap=cmap
+    )
+
+spinel_chem.loc[:, targets].pyroplot.density(ax=ax[1], **density_kw)
+plt.tight_layout()
+save_figure(fig, name="Spinel", save_at="../img", save_fmts=["png", "pdf"], dpi=800)
+
 #%%
-targets = ["Al2O3", "TiO2", "FeO"]
-
-fig, ax = plt.subplots(1)
-
-ax = phases.loc[exp_spinel, targets].pyroplot.scatter(
-    ax=ax, c=phases.loc[exp_spinel, "temperature"]
-)
-spinel_chem.loc[:, targets].pyroplot.density(ax=ax, **density_kw)
-
-ax.set_title("Spinel", **title_kw)
-save_figure(fig, name="Spinel", save_at="../img", save_fmts=["png", "pdf"])
-phases.loc[exp_liquid, targets].pyroplot.scatter(
-    ax=ax, c=phases.loc[exp_liquid, "temperature"], cmap="plasma"
-)
-ax.set_title("Spinel+Liquid", **title_kw)
-save_figure(fig, name="Spinel+Liquid", save_at="../img", save_fmts=["png", "pdf"])
-#%%
-from pyrolite.util.plot.style import mappable_from_values
-from pyrolite.util.plot.helpers import add_colorbar
-
-targets = ["MgO", "FeO"]
+targets = ["Mg#", "FeO"]
+"""
 ax = phases.loc[exp_liquid, targets].pyroplot.scatter(
     c=phases.loc[exp_liquid, "temperature"], cmap="plasma"
 )
-phases.loc[exp_olivine, targets].pyroplot.scatter(
-    c=phases.loc[exp_olivine, "temperature"], ax=ax
-)
-minchem.loc[olivine, targets].pyroplot.density(ax=ax, **density_kw)
-ax.set_title("Olivine+Liquid", **{**title_kw, "x": 0.9, "y": 0.9})
+"""
+ax = minchem.loc[olivine, targets].pyroplot.density(**density_kw)
+phases.loc[exp_olivine, :].pyrochem.oxides.describe()
+for fltr, cmap in [(ndexprs, "plasma"), (greenexprs, "viridis")]:
+    phases.loc[exp_olivine & fltr, targets].pyroplot.scatter(
+        ax=ax, c=phases.loc[exp_olivine & fltr, "temperature"], s=3, cmap=cmap
+    )
 
-add_colorbar(
-    mappable_from_values(phases.loc[exp_olivine, "temperature"]), ax=ax,
-)
-"""
-add_colorbar(
-    mappable_from_values(phases.loc[exp_liquid, "temperature"], cmap="plasma"), ax=ax,
-)
-"""
+ax.set_title("Olivine", **{**title_kw, "x": 0.9, "y": 0.9})
+
+cb = add_colorbar(mappable_from_values(phases.loc[exp_olivine, "temperature"]), ax=ax,)
+cb.set_label("Temperature", rotation=270, labelpad=20)
+
 save_figure(
-    ax.figure, name="Liquid-Olivine", save_at="../img", save_fmts=["png", "pdf"]
+    ax.figure, name="Olivine", save_at="../img", save_fmts=["png", "pdf"], dpi=600
+)
+ax.set(xlim=(0.65, 0.9), ylim=(14, 27))
+save_figure(
+    ax.figure, name="Olivine-Zoom", save_at="../img", save_fmts=["png", "pdf"], dpi=600
 )
 #%%
 targets = ["Al2O3", "MgO", "FeO"]
-fig, ax = plt.subplots(1, 2, figsize=(8, 4), subplot_kw={"projection": "ternary"})
-ax[0].set_title("Cumulate", **title_kw)
-ax[1].set_title("Liqiud", **title_kw)
-phases.loc[exp_cumulate, targets].pyroplot.scatter(
-    ax=ax[0], c=phases.loc[exp_cumulate, "temperature"],
-)
-phases.loc[exp_liquid, targets].pyroplot.scatter(
-    ax=ax[1], c=phases.loc[exp_liquid, "temperature"], cmap="plasma"
-)
+fig, ax = plt.subplots(2, 1, figsize=(4, 8), subplot_kw={"projection": "ternary"})
+
+ax[0].set_title("Liqiud", **title_kw)
+ax[1].set_title("Cumulate", **title_kw)
+
+for fltr, cmap in [(ndexprs, "plasma"), (greenexprs, "viridis")]:
+    phases.loc[exp_liquid & fltr, targets].pyroplot.scatter(
+        ax=ax[0], c=phases.loc[exp_liquid & fltr, "temperature"], s=3, cmap=cmap
+    )
+    phases.loc[exp_cumulate & fltr, targets].pyroplot.scatter(
+        ax=ax[1], c=phases.loc[exp_cumulate & fltr, "temperature"], s=3, cmap=cmap
+    )
 plt.tight_layout()
 
-save_figure(fig, name="Liquid-Cumulate", save_at="../img", save_fmts=["png", "pdf"])
+save_figure(
+    fig, name="Liquid-Cumulate", save_at="../img", save_fmts=["png", "pdf"], dpi=600
+)
