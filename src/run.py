@@ -34,7 +34,7 @@ styles = {
     "Kharaelakhsky": {"c": "lime", "marker": "o"},
 }
 
-for s in df.Suite.unique():
+for s in df.Suite.unique()[::-1]:
     ax = df.loc[df.Suite == s, targets].pyroplot.scatter(ax=ax, **{**kw, **styles[s]})
     labels.append(s)
     proxies.append(proxy_line(markersize=np.sqrt(kw["s"]), ls="", mec="k", **styles[s]))
