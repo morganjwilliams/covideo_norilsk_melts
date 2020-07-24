@@ -65,19 +65,25 @@ fig, ax = _phasevolumes(
     legend_on=-2,
 )
 ax[-1].axis("off")
-save_figure(fig, name="Batch_1Wt%H2O", save_at="../img/", save_fmts=["png", "pdf"], dpi=800)
+save_figure(
+    fig, name="Batch_1Wt%H2O", save_at="../img/", save_fmts=["png", "pdf"], dpi=800
+)
 fig, ax = _phasevolumes(
     phases.loc[phases.experiment.isin(exprs)],
     config=cfg,
     n_across=4,
-    aspect=1,
+    aspect=0.8,
     unit_size=5,
-    exprs=sorted(exprs, key=lambda x: cfg[x][1]["Title"]),
+    exprs=[sorted(exprs, key=lambda x: cfg[x][1]["Title"])[0]], # only run one, so x axis has temp
     legend_on=0,
 )
 [a.set_visible(False) for a in ax[1:]]
 save_figure(
-    fig, name="Batch_1Wt%H2O_start", save_at="../img/", save_fmts=["png", "pdf"], dpi=1000
+    fig,
+    name="Batch_1Wt%H2O_start",
+    save_at="../img/",
+    save_fmts=["png", "pdf"],
+    dpi=1000,
 )
 
 #%%
@@ -100,7 +106,9 @@ fig, ax = _phasevolumes(
     legend_on=-2,
 )
 ax[-1].axis("off")
-save_figure(fig, name="Frac_1wt%H2O", save_at="../img/", save_fmts=["png", "pdf"], dpi=800)
+save_figure(
+    fig, name="Frac_1wt%H2O", save_at="../img/", save_fmts=["png", "pdf"], dpi=800
+)
 
 #%%
 from mod.sequence import sequence_distance
