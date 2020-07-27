@@ -1,0 +1,15 @@
+name: covideo_norilsk_melts
+
+channels:
+  - conda-forge
+  - defaults
+
+dependencies:
+  - python=3.7
+  - pip
+  - matplotlib
+  - scipy>=1.2
+  - pandas>=0.23
+  - pip:
+      - git+git://github.com/morganjwilliams/pyrolite.git@develop#egg=pyrolite[skl] # most recent pyrolite
+      - git+git://github.com/morganjwilliams/pyrolite-meltsutil.git@develop#egg=pyrolite-meltsutil # most recent pyrolite_meltsutil
